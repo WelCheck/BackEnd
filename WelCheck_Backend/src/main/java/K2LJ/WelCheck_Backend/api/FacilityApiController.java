@@ -9,6 +9,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @RestController
 @RequiredArgsConstructor
 @Transactional
@@ -30,6 +33,29 @@ public class FacilityApiController {
         Facility findFacility = facilityService.findOne(id);
         return new UpdateFacilityResponse(findFacility.getId(), findFacility.getFcltCd());
     }
+
+    @GetMapping("/facilitys")
+    public Result facilitys(){
+        List<FacilityDto> collect = facilityService.findAll().stream()
+                .map(f -> new FacilityDto(f.getFcltCd()))
+                .collect(Collectors.toList());
+        //for사용해도 무방
+
+        return new Result(collect);
+    }
+
+    @Data
+    @AllArgsConstructor
+    static class Result<T> {
+        private T data;
+    }
+
+    @Data
+    @AllArgsConstructor
+    static class FacilityDto{
+        String fcltCd;
+    }
+
     @Data
     static class CreateFacilityRequest {
         String fcltCd;

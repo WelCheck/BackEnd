@@ -1,5 +1,6 @@
 package K2LJ.WelCheck_Backend.domain.facility;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -45,4 +46,6 @@ public class Facility {
     private String cprNm;  //법인명
 
     private String cfbNm; //업종명
+
+    //@JsonIgnore
 }
