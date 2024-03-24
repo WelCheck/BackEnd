@@ -18,7 +18,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Transactional
 class FacilityServiceTest {
     @Autowired
-    private FacilityService facilityService;
+    private FacilityServiceImp facilityService;
     @Test
     void registrationFacility() {
         //given
@@ -50,12 +50,15 @@ class FacilityServiceTest {
     void findFacilitys() {
         //given
         Facility facility1 = new Facility();
-        Facility facility2 = new Facility();
+        facility1.setFcltCd("시설1");
         facilityService.registrationFacility(facility1);
+
+        Facility facility2 = new Facility();
+        facility2.setFcltCd("시설2");
         facilityService.registrationFacility(facility2);
 
         //when
-        List<Facility> facilitys = facilityService.findFacilitys();
+        List<Facility> facilitys = facilityService.findAll();
 
         assertThat(facilitys).size().isEqualTo(2);
         /*assertThat(facilitys).contains(facility1);

@@ -4,6 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.Getter;
 import lombok.Setter;
 @Entity
@@ -16,6 +17,7 @@ public class Facility {
 
     private String fcltNm; //시설명
 
+    @NotEmpty
     private String fcltCd; //시설코드
 
     private String rprsNm; //대표자 명
