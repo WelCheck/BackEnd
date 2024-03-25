@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:h2:tcp://localhost/~/welcheck_backend
+    url: jdbc:h2:~/welcheck_backend_test
     username: sa
     password:
     driver-class-name: org.h2.Driver
