@@ -1,11 +1,10 @@
-package K2LJ.WelCheck_Backend.member.domain.member;
+package K2LJ.WelCheck_Backend.memberpackage.domain.member;
 
-import K2LJ.WelCheck_Backend.member.domain.Address;
-import K2LJ.WelCheck_Backend.member.domain.Sex;
+import K2LJ.WelCheck_Backend.memberpackage.domain.Address;
+import K2LJ.WelCheck_Backend.memberpackage.domain.Sex;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.web.bind.annotation.GetMapping;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)

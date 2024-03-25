@@ -1,4 +1,4 @@
-package K2LJ.WelCheck_Backend.member.domain;
+package K2LJ.WelCheck_Backend.memberpackage.domain;
 
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;

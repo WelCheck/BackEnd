@@ -1,4 +1,4 @@
-package K2LJ.WelCheck_Backend.member.domain.member;
+package K2LJ.WelCheck_Backend.memberpackage.domain.member;
 
 import jakarta.persistence.Entity;
 

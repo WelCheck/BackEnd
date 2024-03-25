@@ -1,8 +1,8 @@
-package K2LJ.WelCheck_Backend.member.repository;
+package K2LJ.WelCheck_Backend.memberpackage.repository;
 
-import K2LJ.WelCheck_Backend.member.domain.Address;
-import K2LJ.WelCheck_Backend.member.domain.Sex;
-import K2LJ.WelCheck_Backend.member.domain.member.Member;
+import K2LJ.WelCheck_Backend.memberpackage.domain.Address;
+import K2LJ.WelCheck_Backend.memberpackage.domain.Sex;
+import K2LJ.WelCheck_Backend.memberpackage.domain.member.Member;
 import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @Transactional
